@@ -9,9 +9,11 @@ public class GameController : MonoBehaviour {
 	public int crateCount;
 	public float dropRate;
 
-	public GUIText guiText;
+	public GUIText scoreText;
+	public int score;
 
 	void Start(){
+		score = 0;
 		StartCoroutine (SpawnWave ());
 	}
 	IEnumerator SpawnWave(){
@@ -20,5 +22,15 @@ public class GameController : MonoBehaviour {
 			Instantiate (crate, droppingPoint.position, droppingPoint.rotation);
 			yield return new WaitForSeconds (dropRate);
 		}
+	}
+
+	public void AddScore(int newScoreValue){
+		score += newScoreValue;
+		scoreUpdate ();
+	}
+
+
+	void scoreUpdate(){
+		scoreText.text = "Score :" + score;
 	}
 }

@@ -6,10 +6,22 @@ public class CrateController : MonoBehaviour {
 
 	public float thrust;
 	public Rigidbody rb;
+	public int scoreValue;
+	public GameController gameController;
+
 
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
+		if (gameControllerObject != null)
+		{
+			gameController = gameControllerObject.GetComponent <GameController>();
+		}
+		if (gameController == null)
+		{
+			Debug.Log ("Cannot find 'GameController' script");
+		}
 	}
 
 	void FixedUpdate()
@@ -24,6 +36,6 @@ public class CrateController : MonoBehaviour {
 		}
 		gameObject.transform.parent = other.transform;
 		rb.isKinematic = true;
-
+		gameController.AddScore (scoreValue);
 	}
 }
