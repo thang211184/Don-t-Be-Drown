@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour {
 	public int crateCount;
 	public float dropRate;
 
+	public GUIText guiText;
+
 	void Start(){
 		StartCoroutine (SpawnWave ());
 	}

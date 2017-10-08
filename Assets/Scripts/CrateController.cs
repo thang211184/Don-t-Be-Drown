@@ -24,6 +24,6 @@ public class CrateController : MonoBehaviour {
 		}
 		gameObject.transform.parent = other.transform;
 		rb.isKinematic = true;
-		other.attachedRigidbody(rb);
+
 	}
 }
