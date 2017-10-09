@@ -112,6 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 10
   rb: {fileID: 0}
+  scoreValue: 10
+  gameController: {fileID: 0}
 --- !u!212 &212205236660642950
 SpriteRenderer:
   m_ObjectHideFlags: 1

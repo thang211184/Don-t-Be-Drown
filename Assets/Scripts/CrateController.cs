@@ -7,7 +7,7 @@ public class CrateController : MonoBehaviour {
 	public float thrust;
 	public Rigidbody rb;
 	public int scoreValue;
-	public GameController gameController;
+	private GameController gameController;
 
 
 	void Start()
@@ -37,5 +37,6 @@ public class CrateController : MonoBehaviour {
 		gameObject.transform.parent = other.transform;
 		rb.isKinematic = true;
 		gameController.AddScore (scoreValue);
+		gameController.AddCrate (gameObject);
 	}
 }
