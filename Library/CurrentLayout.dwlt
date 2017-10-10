@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -107,8 +107,8 @@ MonoBehaviour:
     y: 30
     width: 1405
     height: 806
-  m_MinSize: {x: 713, y: 471}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 21
 --- !u!114 &6
@@ -153,8 +153,8 @@ MonoBehaviour:
     y: 0
     width: 651
     height: 421
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -178,8 +178,8 @@ MonoBehaviour:
     y: 421
     width: 651
     height: 385
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -205,8 +205,8 @@ MonoBehaviour:
     y: 0
     width: 475
     height: 806
-  m_MinSize: {x: 234, y: 471}
-  m_MaxSize: {x: 10004, y: 14021}
+  m_MinSize: {x: 234, y: 492}
+  m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
   controlID: 68
 --- !u!114 &10
@@ -387,14 +387,14 @@ MonoBehaviour:
     width: 649
     height: 400
   m_SceneLighting: 1
-  lastFramingTime: 533.1216930150986
+  lastFramingTime: 4658.100477993488
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.33, y: -5.42, z: 0}
+    m_Target: {x: -14.97, y: -5.42, z: 0}
     speed: 2
-    m_Value: {x: -0.33, y: -5.42, z: 0}
+    m_Value: {x: -14.97, y: -5.42, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -421,9 +421,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.04348037, y: -0.016483646, z: -0.0007174917, w: -0.9989181}
   m_Size:
-    m_Target: 61.19299
+    m_Target: 39.801178
     speed: 2
-    m_Value: 61.19299
+    m_Value: 39.801178
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -462,7 +462,7 @@ MonoBehaviour:
     height: 328
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e060000
+    m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
@@ -525,19 +525,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/thangpham/Desktop/Don't Be Drown
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 22260000
-    m_LastClickedID: 9762
-    m_ExpandedIDs: 00000000f42500001626000000ca9a3bffffff7f
+    m_SelectedIDs: 28260000
+    m_LastClickedID: 9768
+    m_ExpandedIDs: 00000000f6250000242600002826000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f425000016260000
+    m_ExpandedIDs: 00000000f62500002426000028260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
-    m_CachedPref: 275
+    m_CachedPref: 119
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}

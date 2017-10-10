@@ -48,6 +48,7 @@ public class CrateController : MonoBehaviour {
 		if (other.tag == "Boundary") {
 			return;
 		}
+		Debug.Log (other.name);
 		// Thuan, we can add sound here
 		gameObject.transform.parent = other.transform;
 		rb.isKinematic = true;

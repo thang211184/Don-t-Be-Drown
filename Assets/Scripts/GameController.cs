@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 	// Crates
 	public GameObject crate;
+	public GameObject boat;
 	public Transform droppingPoint;
 	public int crateCount;
 	public float dropRate;
@@ -12,6 +13,9 @@ public class GameController : MonoBehaviour {
 	// Score
 	public GUIText scoreText;
 	public int score;
+
+	// Hint
+	public GUIText hintText;
 
 	// Total crates on boat
 	List<GameObject> totalCrates = new List<GameObject>{};
@@ -52,10 +56,15 @@ public class GameController : MonoBehaviour {
 
 	void Update(){
 		// Destroy crates( make it disappear) when unload at shelter
-		if (Input.GetKey(KeyCode.A)) {
-			for (int i = 0; i <= totalCrates.Count; i++) {
-				Destroy(totalCrates[i]);
+		if (Input.GetKey(KeyCode.Z)) {
+			if (boat.transform.position.x < -14) {
+				for (int i = 0; i <= totalCrates.Count; i++) {
+					Destroy (totalCrates [i]);
+				}
+			} else {
+				hintText.text = "please go to shelter to unload crates";
 			}
+				return;
 		}
 	}
 }
