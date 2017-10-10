@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,11 +22,24 @@ public class GameController : MonoBehaviour {
 	}
 
 	// Create crates from above
-	IEnumerator SpawnWave(){
+    /*void OnCollisionStay(Collision col)
+    
+    {
+       
+          audio.volume = col.relativeVelocity.magnitude / 20;
+            audio.Play ();
+    
+        
+    }*/
+
+    IEnumerator SpawnWave(){
 		// Wait for few second before start dropping crates
 		yield return new WaitForSeconds (dropRate);
 
-		// Thuan, you can add sound of dropping crate here
+
+        // Thuan, you can add sound of dropping crate here
+      
+
 
 		for (int i = 0; i < crateCount; i++) {
 			// Create crate and drop it
