@@ -42,7 +42,7 @@ public class CrateController : MonoBehaviour {
         if(windZone)
         rb.AddForce(windZone.GetComponent<WindArea>().direction * windZone.GetComponent<WindArea>().strength);
 		// Need to add wind force here or we can make wind like Giang suggest
-		//rb.AddForce (1, 0, 0);
+		rb.AddForce(Random.Range(-25.0F, 25.0F), 0, 0);
 	}
 
 	// When crate touch the boat, it'll stay at the contact point
