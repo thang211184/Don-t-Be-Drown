@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		// Thuan, you can add boat engine sound here
+
 	}
 
 	void FixedUpdate()

@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114775800153815678}
   m_Layer: 0
   m_Name: Crate
-  m_TagString: Boundary
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,6 @@ MonoBehaviour:
   thrust: 10
   rb: {fileID: 0}
   scoreValue: 10
-  gameController: {fileID: 0}
 --- !u!212 &212205236660642950
 SpriteRenderer:
   m_ObjectHideFlags: 1
