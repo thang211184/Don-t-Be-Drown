@@ -94,7 +94,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1946763614818740}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.052842, y: 0.84147596, z: 1}
@@ -113,6 +113,8 @@ MonoBehaviour:
   thrust: 10
   rb: {fileID: 54918434274958598}
   scoreValue: 10
+  windZone: {fileID: 0}
+  isWindZone: 0
 --- !u!212 &212205236660642950
 SpriteRenderer:
   m_ObjectHideFlags: 1

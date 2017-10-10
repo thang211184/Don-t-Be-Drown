@@ -8,6 +8,8 @@ public class CrateController : MonoBehaviour {
 	public Rigidbody rb;
 	public int scoreValue;
 	private GameController gameController;
+    public GameObject windZone;
+    public bool isWindZone = false;
 
 
 
@@ -37,7 +39,8 @@ public class CrateController : MonoBehaviour {
 	{
 		// Add downward force
 		rb.AddForce(0, -10, 0);
-
+        if(windZone)
+        rb.AddForce(windZone.GetComponent<WindArea>().direction * windZone.GetComponent<WindArea>().strength);
 		// Need to add wind force here or we can make wind like Giang suggest
 		//rb.AddForce (1, 0, 0);
 	}
@@ -54,5 +57,16 @@ public class CrateController : MonoBehaviour {
 		rb.isKinematic = true;
 		gameController.AddScore (scoreValue);
 		gameController.AddCrate (gameObject);
+
+        if (other.tag == "windarea")
+        {
+            windZone = other.gameObject;
+            isWindZone = true;
+        }
 	}
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "windarea")
+        { isWindZone = false; }
+    }
 }
