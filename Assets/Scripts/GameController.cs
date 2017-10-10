@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour {
 				for (int i = 0; i <= totalCrates.Count; i++) {
 					Destroy (totalCrates [i]);
 				}
+				//hintText.text = "Thank you very muchhhhhhhhhhhhh";
 			} else {
 				hintText.text = "please go to shelter to unload crates";
 			}
