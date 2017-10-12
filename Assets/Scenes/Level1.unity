@@ -248,7 +248,7 @@ MonoBehaviour:
   crate: {fileID: 1946763614818740, guid: 82ab4b273958c4d5da5cd3fa66b6d8f8, type: 2}
   boat: {fileID: 262960087}
   droppingPoint: {fileID: 1226920953}
-  crateCount: 3
+  crateCount: 1000
   dropRate: 3
   scoreText: {fileID: 1279009367}
   score: 0
@@ -295,8 +295,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8469272, y: 0.15530843, z: 1}
-  m_Center: {x: 0.17255352, y: -0.70337063, z: 0}
+  m_Size: {x: 2.2986615, y: 0.42562115, z: 1}
+  m_Center: {x: 0.1177266, y: -0.4480769, z: 0}
 --- !u!54 &262960089
 Rigidbody:
   m_ObjectHideFlags: 0
