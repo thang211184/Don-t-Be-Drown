@@ -797,7 +797,7 @@ GUIText:
   m_Font: {fileID: 0}
   m_Material: {fileID: 0}
   m_FontSize: 14
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_Color:
     serializedVersion: 2
     rgba: 4281019363
