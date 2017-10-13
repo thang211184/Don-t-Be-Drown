@@ -34,6 +34,11 @@ public class GameController : MonoBehaviour {
 
 		for (int i = 0; i < crateCount; i++) {
 			// Create crate and drop it
+			float x = Random.Range(-7, 7);
+            float y = 9;
+            float z = 0;
+            Vector3 pos = new Vector3(x, y, z);
+            droppingPoint.position = pos;
 			Instantiate (crate, droppingPoint.position, droppingPoint.rotation);
 			yield return new WaitForSeconds (dropRate);
 		}
@@ -51,7 +56,7 @@ public class GameController : MonoBehaviour {
 	}
 		
 	void scoreUpdate(){
-		scoreText.text = "Score :" + score + "Crate: " + (totalCrates.Count + 1 );
+		scoreText.text = "Score :" + score + " Crate: " + (totalCrates.Count + 1 );
 	}
 
 	void Update(){

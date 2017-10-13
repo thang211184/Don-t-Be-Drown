@@ -7,6 +7,7 @@ TagManager:
   - Boundary
   - Crate
   - Boat
+  - windarea
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Alligator
   - 
   - 
   - 
@@ -41,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Alligator
+    uniqueID: 4065365397
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
