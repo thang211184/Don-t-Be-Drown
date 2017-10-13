@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour {
 		for (int i = 0; i < crateCount; i++) {
 			// Create crate and drop it
 			float x = Random.Range(-7, 7);
-            float y = 9;
+            float y = 4.96f;
             float z = 0;
             Vector3 pos = new Vector3(x, y, z);
             droppingPoint.position = pos;
@@ -72,5 +72,9 @@ public class GameController : MonoBehaviour {
 			}
 				return;
 		}
+
+		// Detroy crate when go out boundary
 	}
+
+
 }

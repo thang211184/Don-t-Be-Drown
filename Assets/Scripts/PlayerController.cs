@@ -8,13 +8,13 @@ public class Boundary{
 }
 
 public class PlayerController : MonoBehaviour {
-	public Rigidbody rb;
+	public Rigidbody2D rb;
 	public float speed;
 	public Boundary boundary;
 
 	void Start()
 	{
-		rb = GetComponent<Rigidbody>();
+		rb = GetComponent<Rigidbody2D>();
 		// Thuan, you can add boat engine sound here
 
 	}
@@ -26,10 +26,10 @@ public class PlayerController : MonoBehaviour {
 		Vector2 move = new Vector2 (moveHorizontal, 0.0f);
 		rb.velocity = move*speed;
 
-		rb.position = new Vector2 (
+		/*rb.position = new Vector2 (
 			Mathf.Clamp(rb.position.x, boundary.xMin, boundary.Xmax), 
 			-6.2f
-		);
+		);*/
 	}
 		
 }
