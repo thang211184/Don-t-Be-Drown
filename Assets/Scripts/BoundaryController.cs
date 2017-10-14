@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class BoundaryController : MonoBehaviour {
 
-	private void OnTriggerExit(Collider other)
+	private void OnTriggerExit2D(Collider2D other)
 	{
-		Destroy (other.gameObject);
+		Debug.Log ("Crate exit");
+		if (other.tag == "Crate") {
+			Destroy (other.gameObject);
+		}
 	}
 }

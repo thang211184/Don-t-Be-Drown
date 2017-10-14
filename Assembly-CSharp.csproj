@@ -51,11 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BoundaryController.cs" />
      <Compile Include="Assets\Scripts\alligator_move.cs" />
      <Compile Include="Assets\Scripts\AttachOnContact.cs" />
+     <Compile Include="Assets\Scripts\BoundaryController.cs" />
      <Compile Include="Assets\Scripts\CrateController.cs" />
-     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />

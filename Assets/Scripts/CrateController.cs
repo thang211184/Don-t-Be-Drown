@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrateController : MonoBehaviour {
 
 	public float thrust;
-	public Rigidbody rb;
+	public Rigidbody2D rb;
 	public int scoreValue;
 	private GameController gameController;
     public GameObject windZone;
@@ -15,7 +15,7 @@ public class CrateController : MonoBehaviour {
 
 	void Start()
 	{
-		rb = GetComponent<Rigidbody>();
+		rb = GetComponent<Rigidbody2D>();
 
 		// Make GameController and CrateConller wort together
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
@@ -34,39 +34,5 @@ public class CrateController : MonoBehaviour {
 		
 	}
 
-	// Add force to crate
-	void FixedUpdate()
-	{
-		// Add downward force
-		rb.AddForce(0, -10, 0);
-        if(windZone)
-        rb.AddForce(windZone.GetComponent<WindArea>().direction * windZone.GetComponent<WindArea>().strength);
-		// Need to add wind force here or we can make wind like Giang suggest
-		rb.AddForce(Random.Range(-25.0F, 25.0F), 0, 0);
-	}
 
-	// When crate touch the boat, it'll stay at the contact point
-
-	void OnTriggerEnter(Collider other) {
-		if (other.tag == "Boundary") {
-			return;
-		}
-		Debug.Log (other.name);
-		// Thuan, we can add sound here
-		gameObject.transform.parent = other.transform;
-		rb.isKinematic = true;
-		gameController.AddScore (scoreValue);
-		gameController.AddCrate (gameObject);
-
-        if (other.tag == "windarea")
-        {
-            windZone = other.gameObject;
-            isWindZone = true;
-        }
-	}
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "windarea")
-        { isWindZone = false; }
-    }
 }
