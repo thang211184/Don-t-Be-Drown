@@ -26,10 +26,10 @@ public class PlayerController : MonoBehaviour {
 		Vector2 move = new Vector2 (moveHorizontal, 0.0f);
 		rb.velocity = move*speed;
 
-		rb.position = new Vector2 (
+		/*rb.position = new Vector2 (
 			Mathf.Clamp(rb.position.x, boundary.xMin, boundary.Xmax), 
 			-3.31f
-		);
+		);*/
 	}
 		
 }
