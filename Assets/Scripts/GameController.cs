@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour {
 	public GUIText hintText;
 
 	// Total crates on boat
-	List<GameObject> totalCrates = new List<GameObject>{};
+	GameObject[] totalCrates ;
 
 	void Start(){
 		score = 0;
@@ -51,19 +51,23 @@ public class GameController : MonoBehaviour {
 	}
 
 	// Add crates to the list to destroy later when unload them at shelter station
-	public void AddCrate(GameObject newCrate){
+	/*public void AddCrate(GameObject newCrate){
 		totalCrates.Add (newCrate);
-	}
+	}*/
 		
 	void scoreUpdate(){
-		scoreText.text = "Score :" + score + " Crate: " + (totalCrates.Count + 1 );
+		scoreText.text = "Score :" + score + " Crate: " + (totalCrates.Length);
 	}
 
 	void Update(){
 		// Destroy crates( make it disappear) when unload at shelter
 		if (Input.GetKey(KeyCode.Z)) {
-			if (boat.transform.position.x < -14) {
-				for (int i = 0; i <= totalCrates.Count; i++) {
+			if (boat.transform.position.x < -7.5) {
+				/*for (int i = 0; i <= totalCrates.Count; i++) {
+					Destroy (totalCrates [i]);
+				}*/
+				totalCrates = GameObject.FindGameObjectsWithTag("Crate");
+				for (int i = 0; i <= totalCrates.Length; i++) {
 					Destroy (totalCrates [i]);
 				}
 				//hintText.text = "Thank you very muchhhhhhhhhhhhh";
