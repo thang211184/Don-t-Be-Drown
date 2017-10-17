@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour
         score = 0;
         StartCoroutine(SpawnWave());
         net_drop = false;
+        scoreUpdate();
     }
 
     // Create crates from above
@@ -69,7 +70,7 @@ public class GameController : MonoBehaviour
 
     void scoreUpdate()
     {
-        scoreText.text = "Score :" + score + " Crate: " + (totalCrates.Length);
+        scoreText.text = "Coins :" + score;
     }
 
     void Update()
@@ -90,6 +91,7 @@ public class GameController : MonoBehaviour
                 totalCrates = GameObject.FindGameObjectsWithTag("Crate");
                 for (int i = 0; i < totalCrates.Length; i++)
                 {
+                    AddScore(10);
                     Destroy(totalCrates[i]);
                 }
                 //hintText.text = "Thank you very muchhhhhhhhhhhhh";

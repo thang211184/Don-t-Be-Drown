@@ -20,7 +20,7 @@ public class alligator_move : MonoBehaviour
         target = GameObject.FindWithTag("Boat").transform;
 
         float step = speed * Time.deltaTime;
-        Vector3 offset = new Vector3(0, -1.7f, 0);
+        Vector3 offset = new Vector3(0, -.5f, 0);
         Vector3 targetHeading = target.position + offset;
         Vector3 targetDirection = targetHeading.normalized;
 
