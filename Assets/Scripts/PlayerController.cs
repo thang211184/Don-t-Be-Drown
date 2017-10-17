@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 
 		rb.position = new Vector2 (
 			Mathf.Clamp(rb.position.x, boundary.xMin, boundary.Xmax), 
-			-1.95f
+			-2.72f
 		);
 	}
 		

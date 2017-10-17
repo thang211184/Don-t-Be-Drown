@@ -86,8 +86,12 @@ public class GameController : MonoBehaviour {
 		}
 
 		// Winning condition 
-		if (startingTime <= 0 && score > 2) {
-			hintText.text = " you win";
+		if (startingTime <= 0) {
+			if (score >= 2) {
+				hintText.text = " you win";
+			} else {
+				SceneManager.LoadScene (3);
+			}
 		}
 	}
 
