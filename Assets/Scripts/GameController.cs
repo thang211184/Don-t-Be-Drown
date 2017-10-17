@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -119,11 +120,18 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if (startingTime <= 0 && score > 20)
+        if (startingTime <= 0)
         {
-            hintText.text = " You Win";
+            if (score >= 20)
+            {
+                hintText.text = " you win";
+            }
+            else
+            {
+                SceneManager.LoadScene(3);
+            }
+            // Detroy crate when go out boundary
         }
-        // Detroy crate when go out boundary
     }
 
  
