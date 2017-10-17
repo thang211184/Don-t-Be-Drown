@@ -8,7 +8,6 @@ TagManager:
   - Crate
   - Boat
   - windarea
-  - Net
   layers:
   - Default
   - TransparentFX
@@ -52,9 +51,9 @@ TagManager:
   - name: FrontGround
     uniqueID: 4148366259
     locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Alligator
     uniqueID: 4065365397
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
