@@ -28,7 +28,11 @@ public class PlayerController : MonoBehaviour {
 
 		rb.position = new Vector2 (
 			Mathf.Clamp(rb.position.x, boundary.xMin, boundary.Xmax), 
+<<<<<<< HEAD
 			-2.72f
+=======
+			-3f
+>>>>>>> origin/master
 		);
 	}
 		
