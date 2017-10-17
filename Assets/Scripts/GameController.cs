@@ -118,6 +118,11 @@ public class GameController : MonoBehaviour
                 return;
             }
         }
+
+        if (startingTime <= 0 && score > 20)
+        {
+            hintText.text = " You Win";
+        }
         // Detroy crate when go out boundary
     }
 
