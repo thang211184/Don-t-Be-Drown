@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameController : MonoBehaviour {
 	// Crates
@@ -47,12 +49,7 @@ public class GameController : MonoBehaviour {
 			yield return new WaitForSeconds (dropRate);
 		}
 	}
-
-	// Add score to every catched crate
-	public void AddScore(int newScoreValue){
-		score += newScoreValue;
-		scoreUpdate ();
-	}
+		
 
 	// Add crates to the list to destroy later when unload them at shelter station
 	/*public void AddCrate(GameObject newCrate){
@@ -60,7 +57,7 @@ public class GameController : MonoBehaviour {
 	}*/
 		
 	void scoreUpdate(){
-		scoreText.text = "Score :" + score + " Crate: " + (totalCrates.Length);
+		scoreText.text = "Score :" + score.ToString();
 	}
 
 	void Update(){
@@ -78,6 +75,8 @@ public class GameController : MonoBehaviour {
 				totalCrates = GameObject.FindGameObjectsWithTag("Crate");
 				for (int i = 0; i < totalCrates.Length; i++) {
 					Destroy (totalCrates [i]);
+					score += 1;
+					scoreUpdate ();
 				}
 				//hintText.text = "Thank you very muchhhhhhhhhhhhh";
 			} else {
@@ -86,7 +85,10 @@ public class GameController : MonoBehaviour {
 				return;
 		}
 
-		// Detroy crate when go out boundary
+		// Winning condition 
+		if (startingTime <= 0 && score > 2) {
+			hintText.text = " you win";
+		}
 	}
 
 

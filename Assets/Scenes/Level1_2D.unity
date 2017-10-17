@@ -3729,7 +3729,7 @@ MonoBehaviour:
   droppingPoint: {fileID: 1685648600}
   crateCount: 10
   dropRate: 3
-  startingTime: 100
+  startingTime: 15
   theText: {fileID: 1358999225}
   scoreText: {fileID: 633789028}
   score: 10
