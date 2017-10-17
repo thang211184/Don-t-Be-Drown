@@ -66,8 +66,8 @@
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\QuitOnClick.cs" />
+     <Compile Include="Assets\Scripts\TimeManager.cs" />
      <Compile Include="Assets\Scripts\WindArea.cs" />
-     <Compile Include="Assets\TimeManager.cs" />
      <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
      <None Include="Assets\RainMaker\Readme.txt" />
  <Reference Include="UnityEngine.UI">
