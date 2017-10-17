@@ -10,6 +10,10 @@ public class GameController : MonoBehaviour {
 	public int crateCount;
 	public float dropRate;
 
+	// Time
+	public float startingTime;
+	public GUIText theText;
+
 	// Score
 	public GUIText scoreText;
 	public int score;
@@ -34,7 +38,7 @@ public class GameController : MonoBehaviour {
 
 		for (int i = 0; i < crateCount; i++) {
 			// Create crate and drop it
-			float x = Random.Range(-7, 7);
+			float x = Random.Range(-3, 3);
             float y = 4.96f;
             float z = 0;
             Vector3 pos = new Vector3(x, y, z);
@@ -60,14 +64,19 @@ public class GameController : MonoBehaviour {
 	}
 
 	void Update(){
-		// Destroy crates( make it disappear) when unload at shelter
+		// Time counting
+		startingTime -= Time.deltaTime;
+		theText.text = Mathf.Round(startingTime).ToString();
+
+
+		// Unload crates
 		if (Input.GetKey(KeyCode.Z)) {
 			if (boat.transform.position.x < -7.5) {
 				/*for (int i = 0; i <= totalCrates.Count; i++) {
 					Destroy (totalCrates [i]);
 				}*/
 				totalCrates = GameObject.FindGameObjectsWithTag("Crate");
-				for (int i = 0; i <= totalCrates.Length; i++) {
+				for (int i = 0; i < totalCrates.Length; i++) {
 					Destroy (totalCrates [i]);
 				}
 				//hintText.text = "Thank you very muchhhhhhhhhhhhh";

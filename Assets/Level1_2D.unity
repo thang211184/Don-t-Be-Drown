@@ -3658,6 +3658,8 @@ MonoBehaviour:
   droppingPoint: {fileID: 1685648600}
   crateCount: 10
   dropRate: 3
+  startingTime: 0
+  theText: {fileID: 1358999225}
   scoreText: {fileID: 633789028}
   score: 10
   hintText: {fileID: 271519533}
@@ -3940,6 +3942,7 @@ GameObject:
   - component: {fileID: 525875524}
   - component: {fileID: 525875523}
   - component: {fileID: 525875522}
+  - component: {fileID: 525875525}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Untagged
@@ -4004,6 +4007,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &525875525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525875521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e9a170a80574b27a2b44db8f4fc9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windChangeTime: 0
 --- !u!1 &537339772
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,8 +4336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11dcd603d55d41b2b5b78c7492ce4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 50
-  theText: {fileID: 1358999225}
 --- !u!132 &1358999225
 GUIText:
   m_ObjectHideFlags: 0
@@ -8104,7 +8117,7 @@ MonoBehaviour:
   RainSoundLight: {fileID: 8300000, guid: c980eda1ec9b9ff4b930005976b00f41, type: 3}
   RainSoundMedium: {fileID: 8300000, guid: 3359e9d10af08ca46ae396298dbd1ed9, type: 3}
   RainSoundHeavy: {fileID: 8300000, guid: db1471092e49b7445bfbd374a17ea61a, type: 3}
-  RainIntensity: 1
+  RainIntensity: 0.19
   RainFallParticleSystem: {fileID: 1639322369}
   RainExplosionParticleSystem: {fileID: 26530924}
   RainMistParticleSystem: {fileID: 0}
