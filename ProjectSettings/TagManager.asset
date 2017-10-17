@@ -8,6 +8,7 @@ TagManager:
   - Crate
   - Boat
   - windarea
+  - Net
   layers:
   - Default
   - TransparentFX
