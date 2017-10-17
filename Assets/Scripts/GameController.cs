@@ -31,7 +31,6 @@ public class GameController : MonoBehaviour
     {
         score = 0;
         StartCoroutine(SpawnWave());
-        StartCoroutine(Net_drop());
         net_drop = false;
     }
 
@@ -94,6 +93,7 @@ public class GameController : MonoBehaviour
                     Destroy(totalCrates[i]);
                 }
                 //hintText.text = "Thank you very muchhhhhhhhhhhhh";
+                net_drop = false;
             }
             else
             {
@@ -119,15 +119,5 @@ public class GameController : MonoBehaviour
         // Detroy crate when go out boundary
     }
 
-    IEnumerator Net_drop()
-    {
-        // Wait for few second before start dropping crates
-        if (net_drop)
-        {
-            net_drop = false;
-            yield return new WaitForSeconds(2);
-            
-        }
-
-    }
+ 
 }

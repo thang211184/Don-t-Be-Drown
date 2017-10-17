@@ -35,7 +35,7 @@ public class alligator_move : MonoBehaviour
     {
        // if (other.gameObject.CompareTag("Net"))
         //{
-            Invoke("Reappear", 5);
+            Invoke("Reappear", 15);
             gameObject.SetActive(false);
             other.gameObject.SetActive(false);
        // }
@@ -43,7 +43,9 @@ public class alligator_move : MonoBehaviour
 
         void Reappear()
         {
-            gameObject.SetActive(true); 
+        Vector3 position = new Vector3(5.29f,-2.81f,0);
+        transform.position = position;
+        gameObject.SetActive(true); 
         }
 
 }
