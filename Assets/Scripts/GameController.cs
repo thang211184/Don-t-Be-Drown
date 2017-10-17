@@ -130,9 +130,10 @@ public class GameController : MonoBehaviour
 
         if (startingTime <= 0)
         {
-            if (score >= 20)
+            if (score >= 50)
             {
-                hintText.text = " you win";
+                hintText.text = " You Win";
+                SceneManager.LoadScene(3);
             }
             else
             {
