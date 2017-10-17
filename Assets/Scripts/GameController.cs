@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameController : MonoBehaviour
 {
@@ -51,6 +53,7 @@ public class GameController : MonoBehaviour
             float z = 0;
             Vector3 pos = new Vector3(x, y, z);
             droppingPoint.position = pos;
+<<<<<<< HEAD
             Instantiate(crate, droppingPoint.position, droppingPoint.rotation);
             yield return new WaitForSeconds(dropRate);
         }
@@ -67,6 +70,22 @@ public class GameController : MonoBehaviour
     /*public void AddCrate(GameObject newCrate){
 		totalCrates.Add (newCrate);
 	}*/
+=======
+			Instantiate (crate, droppingPoint.position, droppingPoint.rotation);
+			yield return new WaitForSeconds (dropRate);
+		}
+	}
+		
+
+	// Add crates to the list to destroy later when unload them at shelter station
+	/*public void AddCrate(GameObject newCrate){
+		totalCrates.Add (newCrate);
+	}*/
+		
+	void scoreUpdate(){
+		scoreText.text = "Score :" + score.ToString();
+	}
+>>>>>>> 16a7f15a4292c6fc378e7bfc614552a47181996e
 
     void scoreUpdate()
     {
@@ -88,6 +107,7 @@ public class GameController : MonoBehaviour
                 /*for (int i = 0; i <= totalCrates.Count; i++) {
 					Destroy (totalCrates [i]);
 				}*/
+<<<<<<< HEAD
                 totalCrates = GameObject.FindGameObjectsWithTag("Crate");
                 for (int i = 0; i < totalCrates.Length; i++)
                 {
@@ -122,4 +142,26 @@ public class GameController : MonoBehaviour
     }
 
  
+=======
+				totalCrates = GameObject.FindGameObjectsWithTag("Crate");
+				for (int i = 0; i < totalCrates.Length; i++) {
+					Destroy (totalCrates [i]);
+					score += 1;
+					scoreUpdate ();
+				}
+				//hintText.text = "Thank you very muchhhhhhhhhhhhh";
+			} else {
+				hintText.text = "please go to shelter to unload crates";
+			}
+				return;
+		}
+
+		// Winning condition 
+		if (startingTime <= 0 && score > 2) {
+			hintText.text = " you win";
+		}
+	}
+
+
+>>>>>>> 16a7f15a4292c6fc378e7bfc614552a47181996e
 }
