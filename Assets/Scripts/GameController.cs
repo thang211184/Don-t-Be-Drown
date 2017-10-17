@@ -13,6 +13,10 @@ public class GameController : MonoBehaviour
     public int crateCount;
     public float dropRate;
     bool net_drop;
+    public AudioSource scoresound;
+    public AudioSource dropcrate;
+    AudioSource audioSource;
+
 
     // Time
     public float startingTime;
@@ -34,6 +38,7 @@ public class GameController : MonoBehaviour
         StartCoroutine(SpawnWave());
         net_drop = false;
         scoreUpdate();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Create crates from above
@@ -47,6 +52,7 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < crateCount; i++)
         {
             // Create crate and drop it
+            dropcrate.Play();
             float x = Random.Range(-3, 3);
             float y = 4.96f;
             float z = 0;
@@ -62,6 +68,7 @@ public class GameController : MonoBehaviour
     {
         score += newScoreValue;
         scoreUpdate();
+        
     }
 
     // Add crates to the list to destroy later when unload them at shelter station
@@ -72,6 +79,7 @@ public class GameController : MonoBehaviour
     void scoreUpdate()
     {
         scoreText.text = "Coins :" + score;
+        scoresound.Play();
     }
 
     void Update()
