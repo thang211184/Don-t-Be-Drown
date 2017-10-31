@@ -53,7 +53,6 @@ public class GameController : MonoBehaviour
             float z = 0;
             Vector3 pos = new Vector3(x, y, z);
             droppingPoint.position = pos;
-<<<<<<< HEAD
             Instantiate(crate, droppingPoint.position, droppingPoint.rotation);
             yield return new WaitForSeconds(dropRate);
         }
@@ -70,7 +69,6 @@ public class GameController : MonoBehaviour
     /*public void AddCrate(GameObject newCrate){
 		totalCrates.Add (newCrate);
 	}*/
-=======
 			Instantiate (crate, droppingPoint.position, droppingPoint.rotation);
 			yield return new WaitForSeconds (dropRate);
 		}
