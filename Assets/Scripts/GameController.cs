@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameController : MonoBehaviour
 {
     // Crates
@@ -13,10 +14,6 @@ public class GameController : MonoBehaviour
     public int crateCount;
     public float dropRate;
     bool net_drop;
-    public AudioSource scoresound;
-    public AudioSource dropcrate;
-    AudioSource audioSource;
-
 
     // Time
     public float startingTime;
@@ -38,7 +35,6 @@ public class GameController : MonoBehaviour
         StartCoroutine(SpawnWave());
         net_drop = false;
         scoreUpdate();
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Create crates from above
@@ -52,7 +48,6 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < crateCount; i++)
         {
             // Create crate and drop it
-            dropcrate.Play();
             float x = Random.Range(-3, 3);
             float y = 4.96f;
             float z = 0;
@@ -68,14 +63,12 @@ public class GameController : MonoBehaviour
     {
         score += newScoreValue;
         scoreUpdate();
-        
     }
 
     // Add crates to the list to destroy later when unload them at shelter station
     /*public void AddCrate(GameObject newCrate){
 		totalCrates.Add (newCrate);
 	}*/
-<<<<<<< HEAD
 			Instantiate (crate, droppingPoint.position, droppingPoint.rotation);
 			yield return new WaitForSeconds (dropRate);
 		}
@@ -91,13 +84,10 @@ public class GameController : MonoBehaviour
 		scoreText.text = "Score :" + score.ToString();
 	}
 >>>>>>> 16a7f15a4292c6fc378e7bfc614552a47181996e
-=======
->>>>>>> origin/master
 
     void scoreUpdate()
     {
         scoreText.text = "Coins :" + score;
-        scoresound.Play();
     }
 
     void Update()
@@ -115,6 +105,7 @@ public class GameController : MonoBehaviour
                 /*for (int i = 0; i <= totalCrates.Count; i++) {
 					Destroy (totalCrates [i]);
 				}*/
+<<<<<<< HEAD
                 totalCrates = GameObject.FindGameObjectsWithTag("Crate");
                 for (int i = 0; i < totalCrates.Length; i++)
                 {
@@ -145,21 +136,34 @@ public class GameController : MonoBehaviour
                 return;
             }
         }
-
-        if (startingTime <= 0)
-        {
-            if (score >= 50)
-            {
-                hintText.text = " You Win";
-                SceneManager.LoadScene(3);
-            }
-            else
-            {
-                SceneManager.LoadScene(3);
-            }
-            // Detroy crate when go out boundary
-        }
+        // Detroy crate when go out boundary
     }
 
  
+=======
+				totalCrates = GameObject.FindGameObjectsWithTag("Crate");
+				for (int i = 0; i < totalCrates.Length; i++) {
+					Destroy (totalCrates [i]);
+					score += 1;
+					scoreUpdate ();
+				}
+				//hintText.text = "Thank you very muchhhhhhhhhhhhh";
+			} else {
+				hintText.text = "please go to shelter to unload crates";
+			}
+				return;
+		}
+
+		// Winning condition 
+		if (startingTime <= 0) {
+			if (score >= 2) {
+				hintText.text = " you win";
+			} else {
+				SceneManager.LoadScene (3);
+			}
+		}
+	}
+
+
+>>>>>>> 16a7f15a4292c6fc378e7bfc614552a47181996e
 }
